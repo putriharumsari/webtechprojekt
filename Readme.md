@@ -2,13 +2,14 @@
 
 # ReadMe
 
-Web-Pflanzen
+Suitable Plant
 
-Man könnte herausfinden, 
-- welche Pflanzen in einer bestimmten Jahreszeit geeignet sind
-- wie die Pflanzen gepflegt werden soll
+by giving input plant type or plant name e.g.: "peace lily"
+which will give output
+- suitable for planting in what season
+- suitable for planting anywhere -> indoors, on the balcony or in the garden
+- how to take care of it
 
-
-Ich stelle die Leute zur Verfügung,
-- um die Pflanzenarten, die sie kennen, auf diese Webseite hochzuladen oder hinzuzufügen
-- um die Kommentare zu schreiben
+another option giving input season e.g.: "fall"
+will give output
+- what types of plants are suitable in the season mentioned
