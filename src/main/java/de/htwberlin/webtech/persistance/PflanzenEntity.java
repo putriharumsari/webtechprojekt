@@ -2,19 +2,19 @@ package de.htwberlin.webtech.persistance;
 
 import javax.persistence.*;
 
-@Entity(name = "persons")
-public class PersonEntity {
+@Entity(name = "pflanzens")
+public class PflanzenEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "first_Name", nullable = false)
-    private String firstName;
+    @Column(name = "plant_Name", nullable = false)
+    private String plantName;
 
-    @Column(name = "last_Name", nullable = false)
-    private String lastName;
+    @Column(name = "another_Name", nullable = false)
+    private String anotherName;
 
     @Column(name = "is_vaccinated")
     private Boolean vaccinated;
@@ -23,32 +23,32 @@ public class PersonEntity {
     private String testColumn;
 
 
-    public PersonEntity(String firstName, String lastName, Boolean vaccinated) {
-        this.firstName = firstName;
-        this.lastName = lastName;
+    public PflanzenEntity(String plantName, String anotherName, Boolean vaccinated) {
+        this.plantName = plantName;
+        this.anotherName = anotherName;
         this.vaccinated = vaccinated;
     }
 
-    protected PersonEntity() {}
+    protected PflanzenEntity() {}
 
     public Long getId() {
         return id;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getPlantName() {
+        return plantName;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setPlantName(String plantName) {
+        this.plantName = plantName;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getAnotherName() {
+        return anotherName;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setAnotherName(String anotherName) {
+        this.anotherName = anotherName;
     }
 
     public Boolean getVaccinated() {
