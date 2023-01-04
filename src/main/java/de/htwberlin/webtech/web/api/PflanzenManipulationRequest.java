@@ -3,13 +3,15 @@ package de.htwberlin.webtech.web.api;
 public class PflanzenManipulationRequest {
     private String plantName;
     private String anotherName;
-    private boolean vaccinated;
+    private String farbe;
 
-    public PflanzenManipulationRequest(String plantName, String anotherName, boolean vaccinated) {
+    public PflanzenManipulationRequest(String plantName, String anotherName, String farbe) {
         this.plantName = plantName;
         this.anotherName = anotherName;
-        this.vaccinated = vaccinated;
+        this.farbe = farbe;
     }
+
+    public PflanzenManipulationRequest() {}
 
     public String getPlantName() {
         return plantName;
@@ -27,11 +29,11 @@ public class PflanzenManipulationRequest {
         this.anotherName = anotherName;
     }
 
-    public boolean isVaccinated() {
-        return vaccinated;
+    public String getFarbe() {
+        return farbe;
     }
 
-    public void setVaccinated(boolean vaccinated) {
-        this.vaccinated = vaccinated;
+    public void setFarbe(String farbe) {
+        this.farbe = farbe;
     }
 }

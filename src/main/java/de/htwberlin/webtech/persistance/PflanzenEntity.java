@@ -16,17 +16,17 @@ public class PflanzenEntity {
     @Column(name = "another_Name", nullable = false)
     private String anotherName;
 
-    @Column(name = "is_vaccinated")
-    private Boolean vaccinated;
+    @Column(name = "farbe")
+    private String farbe;
 
     @Column(name = "test")
     private String testColumn;
 
 
-    public PflanzenEntity(String plantName, String anotherName, Boolean vaccinated) {
+    public PflanzenEntity(String plantName, String anotherName, String farbe) {
         this.plantName = plantName;
         this.anotherName = anotherName;
-        this.vaccinated = vaccinated;
+        this.farbe = farbe;
     }
 
     protected PflanzenEntity() {}
@@ -51,12 +51,12 @@ public class PflanzenEntity {
         this.anotherName = anotherName;
     }
 
-    public Boolean getVaccinated() {
-        return vaccinated;
+    public String getFarbe() {
+        return farbe;
     }
 
-    public void setVaccinated(Boolean vaccinated) {
-        this.vaccinated = vaccinated;
+    public void setFarbe(String farbe) {
+        this.farbe = farbe;
     }
 
     public String getTestColumn() {

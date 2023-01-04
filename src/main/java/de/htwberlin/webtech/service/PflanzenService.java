@@ -32,7 +32,7 @@ public class PflanzenService {
     }
 
     public Pflanzen create(PflanzenManipulationRequest request) {
-        var pflanzenEntity = new PflanzenEntity(request.getPlantName(), request.getAnotherName(), request.isVaccinated());
+        var pflanzenEntity = new PflanzenEntity(request.getPlantName(), request.getAnotherName(), request.getFarbe());
         pflanzenEntity = pflanzenRepository.save(pflanzenEntity);
         return transformEntity(pflanzenEntity);
     }
@@ -45,7 +45,7 @@ public class PflanzenService {
         var pflanzenEntity = pflanzenEntityOptional.get();
         pflanzenEntity.setPlantName(request.getPlantName());
         pflanzenEntity.setAnotherName(request.getAnotherName());
-        pflanzenEntity.setVaccinated(request.isVaccinated());
+        pflanzenEntity.setFarbe(request.getFarbe());
         pflanzenEntity = pflanzenRepository.save(pflanzenEntity);
 
         return transformEntity(pflanzenEntity);
@@ -65,7 +65,7 @@ public class PflanzenService {
                 pflanzenEntity.getId(),
                 pflanzenEntity.getPlantName(),
                 pflanzenEntity.getAnotherName(),
-                pflanzenEntity.getVaccinated()
+                pflanzenEntity.getFarbe()
         );
     }
 }
